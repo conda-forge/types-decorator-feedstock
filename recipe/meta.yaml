@@ -1,5 +1,5 @@
 {% set name = "types-decorator" %}
-{% set version = "0.1.7" %}
+{% set version = "5.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-decorator-{{ version }}.tar.gz
-  sha256: 1772c7a83d2846a09c90ae0549058baffb10d0dd01f9494e2032567d3b62ac5e
+  sha256: 99abd00c614e54e75ee08d88799886acc2918cc88905eca6474ba917b327729b
 
 build:
   number: 0
