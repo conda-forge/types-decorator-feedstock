@@ -1,33 +1,33 @@
-{% set name = "types-decorator" %}
 {% set version = "5.1.8.20240310" %}
 
-
 package:
-  name: {{ name|lower }}
+  name: types-decorator
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/types-decorator-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/t/types-decorator/types-decorator-{{ version }}.tar.gz
   sha256: 52e316b03783886a8a2abdc228f7071680ba65894545cd2085ebe3cf88684a0e
 
 build:
   number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
+    - setuptools
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
 
 test:
   requires:
+    - pip
     - python {{ python_min }}
   commands:
+    - pip check
     - test -f $SP_DIR/decorator-stubs/__init__.pyi
-
 
 about:
   home: https://github.com/python/typeshed
