@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "5.2.0.20260519"
+  version: "5.2.0.20260712"
 
 package:
   name: types-decorator
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/types-decorator/types_decorator-${{ version }}.tar.gz
-  sha256: b5b23b2f0d11c06748780697d345c8a684fc2d0c753f08ee8063660d9d7a23d9
+  sha256: 2890f05fe3c65546baf5000fd5f1eed4d1c95bae5516e23e1735b7b5a4dd98c6
 
 build:
   number: 0
